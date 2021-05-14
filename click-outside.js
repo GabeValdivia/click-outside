@@ -23,3 +23,15 @@ function handleButtonClick(event) {
 cardButtons.forEach((button) =>
   button.addEventListener('click', handleButtonClick)
 );
+
+// Close modal
+function closeModal() {
+  modalOuter.classList.remove('open');
+}
+
+modalOuter.addEventListener('click', function (event) {
+  const isOutside = !event.target.closest('.modal-inner');
+  if (isOutside) {
+    modalOuter.remove('open');
+  }
+});
