@@ -1,4 +1,5 @@
 const cardButtons = document.querySelectorAll('.card button');
+const modalOuter = document.querySelector('.modal-outer');
 const modalInner = document.querySelector('.modal-inner');
 
 function handleButtonClick(event) {
@@ -16,6 +17,7 @@ function handleButtonClick(event) {
     <p>${desc}</p>
   `;
   // Show the modal
+  modalOuter.classList.add('open');
 }
 
 cardButtons.forEach((button) =>
