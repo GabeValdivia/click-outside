@@ -94,7 +94,13 @@
       min-height: 200px;
       padding: 2rem;
       background: white;
+      transform: translateY(-200%);
+      transition: 2s;
 
+    }
+
+    .modal-outer.open .modal-inner {
+      transform: translateY(0);
     }
   </style>
   <script src="./click-outside.js"></script>
